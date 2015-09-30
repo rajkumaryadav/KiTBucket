@@ -11,9 +11,9 @@ app.controller('SellerSelectionController', function DBController($scope, dataSV
 //        console.log($rootScope.$storage.seller);
         if ($rootScope.$storage.seller != null) {
 //            console.log("here");
-            $scope.$apply(function() {
+          //  $scope.$apply(function() {
   $location.path("/app/home");
-});
+//});
         }
 	$scope.seachArea=function()
 	{
@@ -68,10 +68,15 @@ app.controller('SellerSelectionController', function DBController($scope, dataSV
                 dataSVC.updateSeller(d.SellerID,function(response){
 //                    console.log(d);
                     if(response.status == true){
-                        $rootScope.$storage.seller=d; 
-						$scope.$apply(function() {
+                        $rootScope.$storage.seller=d;
+try{						
+						$state.go("app.home")
+						catch(err){
+							alert(err.message)
+						}
+						/*$scope.$apply(function() {
   $location.path("/app/home");
-});
+});*/
                        // $window.location.href = '#/app/home';
                        
                     }
