@@ -75,8 +75,8 @@ alert(response.status)
 						$scope.$apply(function() {
  						
  //alert('a')
-						$state.go("app.home")
-                 $location.path('#/app/home');
+					//	$state.go("app.home")
+                 $location.path('/home');
                        
                     });
 					}
