@@ -71,6 +71,7 @@ app.controller('SellerSelectionController', function DBController($scope, dataSV
                         $rootScope.$storage.seller=d;
 try{						
 						$state.go("app.home")
+}
 						catch(err){
 							alert(err.message)
 						}
