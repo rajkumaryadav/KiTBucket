@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.kitbucket"
+        version   = "1.0.0">
+    <name> KitBucket </name>
+
+    <description>
+        Kit aims to make the local shopping experience of consumers easy and pleasant by connecting them to the merchants in their neighborhood through an easy to use mobile platform. Shop Grocery, Bakery Items, Flowers, Fruits  Vegetables, Meats and Baby Care Products with a few taps and get everything delivered instantly or schedule it for a convenient time later. Choose your preferred mode of payment - Card, Cash-On-Delivery (for those who love the sound of coins) or e-wallet. So, if you forgot to purchase something for home or want to order a cake for the office, just Kit it!
+    </description>
+
+    <author href="http://sumedhasoftech.com" email="mail@sumedhasoftech.com">
+        Sumedha Softech
+    </author>
+	<access origin="*" />
+	<allow-navigation href="*" />
+	<gap:plugin name="fi.avaus.cordova.geolocation" />
+	<gap:plugin name="cordova.plugins.diagnostic" source="plugins.cordova.io" />
+	<gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin" version="1.1.1" />
+	<gap:plugin name="com.phonegap.plugins.pushplugin"  />
+     <gap:plugin name="org.apache.cordova.network-information" version="0.2.12" />
+   <gap:plugin name="org.apache.cordova.device" version="0.2.12" />  
+    <preference name="phonegap-version" value="cli-5.2.0"/>
+    <preference name="orientation"      value="portrait" />
+    <preference name="target-device"    value="universal" />
+    <preference name="fullscreen"       value="false" />
+    <preference name="webviewbounce"    value="true" />
+    <preference name="stay-in-webview" value="true" />
+	<preference name="prerendered-icon" value="false"/>
+<preference name="SplashScreen" value="assets/splash/welcome.png"  />
+<preference name="SplashScreenDelay" value="10000" />
+<preference name="SplashScreenBackgroundColor" value="green" /> 
+    <icon src="assets/icons/apple-icon.png" />
+    <icon src="assets/icons/android-icon-72x72.png"   gap:platform="android"    gap:density="ldpi" />
+    <icon src="assets/icons/android-icon-96x96.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="assets/icons/android-icon-144x144.png"   gap:platform="android"    gap:density="hdpi" />
+    <icon src="assets/icons/android-icon-192x192.png"  gap:platform="android"    gap:density="xhdpi" />
+    
+<!-- iPhone / iPod Touch  -->
+<icon src="assets/icons/apple-icon-60x60.png" gap:platform="ios" width="60" height="60" />
+<icon src="assets/icons/apple-icon-120x120.png" gap:platform="ios" width="120" height="120" />
+
+<!-- iPad -->
+<icon src="assets/icons/apple-icon-76x76.png" gap:platform="ios" width="76" height="76" />
+<icon src="assets/icons/apple-icon-152x152.png" gap:platform="ios" width="152" height="152" />
+
+<!-- Settings Icon -->
+<icon src="assets/icons/android-icon-36x36.png" gap:platform="ios" width="29" height="29" />
+<icon src="assets/icons/apple-icon-57x57.png" gap:platform="ios" width="58" height="58" />
+
+<!-- Spotlight Icon -->
+<icon src="assets/icons/android-icon-48x48.png" gap:platform="ios" width="40" height="40" />
+<icon src="assets/icons/apple-icon-76x76.png" gap:platform="ios" width="80" height="80" />
+
+<!-- iPhone / iPod Touch -->
+<icon src="assets/icons/apple-icon-57x57.png" gap:platform="ios" width="57" height="57" />
+<icon src="assets/icons/apple-icon-114x114.png" gap:platform="ios" width="114" height="114" />
+
+<!-- iPad -->
+<icon src="assets/icons/apple-icon-72x72.png" gap:platform="ios" width="72" height="72" />
+<icon src="assets/icons/apple-icon-144x144.png" gap:platform="ios" width="144" height="144" />
+
+<!-- iPhone Spotlight and Settings Icon -->
+<icon src="assets/icons/android-icon-36x36.png" gap:platform="ios" width="29" height="29" />
+<icon src="assets/icons/apple-icon-57x57.png" gap:platform="ios" width="58" height="58" />
+
+<!-- iPad Spotlight and Settings Icon -->
+<icon src="assets/icons/apple-icon-57x57.png" gap:platform="ios" width="50" height="50" />
+<icon src="assets/icons/apple-icon-114x114.png" gap:platform="ios" width="100" height="100" />
+
+    <gap:splash src="assets/splash/welcome.png"  	gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="assets/splash/welcome.png"  	gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="assets/splash/welcome.png"  	gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="assets/splash/welcome.png" 	gap:platform="android" gap:density="xhdpi" />
+ <!-- iPhone and iPod touch -->
+<gap:splash src="assets/icons/splash_screen_320x480.png" gap:platform="ios" width="320" height="480" />
+<gap:splash src="assets/icons/splash_screen640x960.png" gap:platform="ios" width="640" height="960" />
+
+<!-- iPhone 5 / iPod Touch (5th Generation) -->
+<gap:splash src="assets/icons/splash_screen640x1136.png" gap:platform="ios" width="640" height="1136" />
+<gap:splash src="assets/icons/Default-568h@2x.png" gap:platform="ios" width="640" height="1136" />
+
+<!-- iPhone 6 -->
+<gap:splash src="assets/icons/splash_screen750x1334.png" gap:platform="ios" width="750" height="1334" />
+<gap:splash src="assets/icons/splash_screen1242x2208.png" gap:platform="ios" width="1242" height="2208" />
+<gap:splash src="assets/icons/splash_screen2208x1242.png" gap:platform="ios" width="2208" height="1242" />
+
+<!-- iPad -->
+<gap:splash src="assets/icons/splash_screen768x1024.png" gap:platform="ios" width="768" height="1024" />
+<gap:splash src="assets/icons/splash_screen1024x768.png" gap:platform="ios" width="1024" height="768" />
+
+<!-- Retina iPad -->
+<gap:splash src="assets/icons/splash_screen1536x2048.png" gap:platform="ios" width="1536" height="2048" />
+<gap:splash src="assets/icons/splash_screen2048x1536.png" gap:platform="ios" width="2048" height="1536" />
+	
+</widget>
