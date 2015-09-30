@@ -1,5 +1,5 @@
 
-app.controller('SellerSelectionController', function DBController($scope, dataSVC,$localStorage,$rootScope,$window) {
+app.controller('SellerSelectionController', function DBController($scope, dataSVC,$localStorage,$rootScope,$location) {
 	var self=this;
 	$scope.sellerList=[];
 	$scope.seller={};
@@ -11,7 +11,9 @@ app.controller('SellerSelectionController', function DBController($scope, dataSV
 //        console.log($rootScope.$storage.seller);
         if ($rootScope.$storage.seller != null) {
 //            console.log("here");
-             $window.location.href = '#/app/home';
+            $scope.$apply(function() {
+  $location.path("/app/home");
+});
         }
 	$scope.seachArea=function()
 	{
@@ -67,7 +69,10 @@ app.controller('SellerSelectionController', function DBController($scope, dataSV
 //                    console.log(d);
                     if(response.status == true){
                         $rootScope.$storage.seller=d; 
-                        $window.location.href = '#/app/home';
+						$scope.$apply(function() {
+  $location.path("/app/home");
+});
+                       // $window.location.href = '#/app/home';
                        
                     }
                 })
