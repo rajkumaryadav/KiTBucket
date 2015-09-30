@@ -67,20 +67,24 @@ app.controller('SellerSelectionController', function DBController($scope, dataSV
                 
                 dataSVC.updateSeller(d.SellerID,function(response){
 //                    console.log(d);
+alert(response.status)
                     if(response.status == true){
+						try{
                         $rootScope.$storage.seller=d;
-try{						
+
+						$scope.$apply(function() {
+ 						
+ //alert('a')
 						$state.go("app.home")
-}
+                 $location.path('#/app/home');
+                       
+                    });
+					}
 						catch(err){
 							alert(err.message)
 						}
-						/*$scope.$apply(function() {
-  $location.path("/app/home");
-});*/
-                       // $window.location.href = '#/app/home';
-                       
-                    }
+};
+      
                 })
                  
 //                $modalInstance.close('');
