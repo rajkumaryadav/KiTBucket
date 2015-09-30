@@ -1,5 +1,5 @@
 
-app.controller('SellerSelectionController', function DBController($scope, dataSVC,$localStorage,$rootScope,$location) {
+app.controller('SellerSelectionController', function DBController($scope, dataSVC,$localStorage,$rootScope,$location,$state) {
 	var self=this;
 	$scope.sellerList=[];
 	$scope.seller={};
