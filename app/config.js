@@ -2,7 +2,7 @@ var app =
     angular.module('app')
         .config(
         [
-            '$controllerProvider', '$compileProvider', '$filterProvider', '$provide','$locationProvider'
+            '$controllerProvider', '$compileProvider', '$filterProvider', '$provide','$locationProvider',
             function($controllerProvider, $compileProvider, $filterProvider, $provide,$locationProvider) {
                 app.controller = $controllerProvider.register;
                 app.directive = $compileProvider.directive;
