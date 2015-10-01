@@ -12,8 +12,6 @@ var app =
                 app.constant = $provide.constant;
                 app.value = $provide.value;
 				
-var h5m = (typeof html5Mode !== 'undefined') ? html5Mode : true;
-$locationProvider.html5Mode(h5m);
             }
         ]);
 

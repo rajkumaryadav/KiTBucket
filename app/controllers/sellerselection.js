@@ -7,12 +7,15 @@ app.controller('SellerSelectionController', function DBController($scope, dataSV
 	$scope.areaId = $rootScope.areaId;
         $scope.isArea = false;
         $scope.isSeller = false;
+	//	$scope.selarea="";
 //        self.sellerList = $rootScope.sellerList;
 //        console.log($rootScope.$storage.seller);
         if ($rootScope.$storage.seller != null) {
 //            console.log("here");
           //  $scope.$apply(function() {
-  $location.path("/app/home");
+  //$location.path("/app/home");
+  jQuery('#selseller').click();
+  
 //});
         }
 	$scope.seachArea=function()
@@ -73,10 +76,7 @@ alert(response.status)
                         $rootScope.$storage.seller=d;
 
 						$scope.$apply(function() {
- 						
- //alert('a')
-					//	$state.go("app.home")
-                 $location.path('/location');
+ 						jQuery('#selseller').click();
                        
                     });
 					}
