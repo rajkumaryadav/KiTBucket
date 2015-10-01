@@ -20,7 +20,7 @@
 	<gap:plugin name="com.phonegap.plugins.pushplugin"  />
      <gap:plugin name="org.apache.cordova.network-information" version="0.2.12" />
    <gap:plugin name="org.apache.cordova.device" version="0.2.12" />  
-    <preference name="phonegap-version" value="cli-5.2.0"/>
+    <preference name="phonegap-version" />
     <preference name="orientation"      value="portrait" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
