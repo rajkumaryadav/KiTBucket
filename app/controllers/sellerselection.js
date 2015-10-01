@@ -82,7 +82,7 @@ app.controller('SellerSelectionController', function DBController($scope, dataSV
                         $rootScope.$storage.seller=d;
 						alert($rootScope.$storage.seller)
 						//$scope.$apply(function() {
- 						jQuery('#selseller').click();
+ 						$('#selseller').click();
 						
 						alert($rootScope.$storage.seller)
                        
