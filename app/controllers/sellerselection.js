@@ -15,7 +15,7 @@ app.controller('SellerSelectionController', function DBController($scope, dataSV
           //  $scope.$apply(function() {
   //$location.path("/app/home");
   try{
-  jQuery('#selseller').click();
+//  jQuery('#selseller').click();
   }
   catch(err){
 	  alert('l')
