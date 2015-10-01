@@ -76,7 +76,7 @@ alert(response.status)
  						
  //alert('a')
 					//	$state.go("app.home")
-                 $location.path('/app/home');
+                 $location.path('/location');
                        
                     });
 					}
