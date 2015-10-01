@@ -106,6 +106,7 @@ angular.module('app').factory("dataSVC", ["$http", "$location","$rootScope", fun
                         callback(result);
                     })
                     .error(function(e, r, s,t,h) {	
+					alert(e);
 						$rootScope.error='No internet connection available';
 						$rootScope.appLoaded=false;
                     });

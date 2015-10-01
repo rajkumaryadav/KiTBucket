@@ -13,7 +13,7 @@ app.controller('SellerSelectionController', function DBController($scope, dataSV
         if ($rootScope.$storage.seller != null) {
 //            console.log("here");
           //  $scope.$apply(function() {
-  //$location.path("/app/home");
+  $location.path("/app/home");
   try{
 //  jQuery('#selseller').click();
   }
@@ -83,7 +83,7 @@ app.controller('SellerSelectionController', function DBController($scope, dataSV
 						alert($rootScope.$storage.seller)
 						//$scope.$apply(function() {
  						//$('#selseller').click();
-						
+						 $location.path("/app/home");
 						alert($rootScope.$storage.seller)
                        
                    // });
