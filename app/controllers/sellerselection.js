@@ -76,13 +76,15 @@ app.controller('SellerSelectionController', function DBController($scope, dataSV
                 
                 dataSVC.updateSeller(d.SellerID,function(response){
 //                    console.log(d);
-alert(response.status)
+
                     if(response.status == true){
 						try{
                         $rootScope.$storage.seller=d;
-
+						alert($rootScope.$storage.seller)
 						$scope.$apply(function() {
  						jQuery('#selseller').click();
+						
+						alert($rootScope.$storage.seller)
                        
                     });
 					}
