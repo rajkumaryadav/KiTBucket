@@ -27,7 +27,7 @@ angular.module('app')
             function ($stateProvider, $urlRouterProvider) {
 
                 $urlRouterProvider
-                    .otherwise('/app/home');
+                     .otherwise('/app/home');
                 $stateProvider
                     .state('app', {
                         abstract: true,
