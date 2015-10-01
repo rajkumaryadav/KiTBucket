@@ -23,7 +23,7 @@ app.controller('category_productController', function($scope,$rootScope,dataSVC,
 	$scope.products=[];
 	$scope.activec=0;
 	$scope.loadProduct=function(catid){
-		$scope.products=[];
+		$scope.products=[];if ($rootScope.$storage.seller != null) {
 		dataSVC.getCategoryProduct(catid,$rootScope.$storage.seller.SellerID,0,20,function(result){
 			console.log(result.data)
 			$scope.products=result.data;
@@ -34,6 +34,7 @@ app.controller('category_productController', function($scope,$rootScope,dataSVC,
 				}
 			}
 		});
+		}
 	}
 	$scope.loadSubCategory=function(catid){
 		dataSVC.getSubCategory(catid,function(result){		
@@ -49,10 +50,12 @@ app.controller('category_productController', function($scope,$rootScope,dataSVC,
 				}
 				$scope.category.Child[index].IsActive=true;
 				$scope.activec=index;
+				
 				$scope.loadProduct($scope.category.Child[index].CategoryId);
 			}
 		});
 	}
+	
 	$scope.loadSubCategory($stateParams.catID);
 	var catIndex=0;
 	$scope.setCategory=function(obj){

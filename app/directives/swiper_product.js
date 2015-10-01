@@ -62,5 +62,7 @@ dataSVC.getFeaturedProduct($rootScope.$storage.seller.SellerID,function(d){
 		});
 		
 		}
+		if ($rootScope.$storage.seller != null) {
 		self.loadData()
+		}
 	}]);
