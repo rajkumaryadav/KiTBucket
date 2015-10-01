@@ -108,7 +108,7 @@ angular.module('app').factory("dataSVC", ["$http", "$location","$rootScope", fun
                     .error(function(e, r, s,t,h) {	
 					alert(e);
 						$rootScope.error='No internet connection available';
-						$rootScope.appLoaded=false;
+						//$rootScope.appLoaded=false;
                     });
         }
         function addToCart(p,IsPackage,callback){
