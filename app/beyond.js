@@ -1,7 +1,7 @@
 ﻿'use strict';
-        app.controller('AppCtrl', ['$scope', '$rootScope', 'dataSVC', '$localStorage', '$modal', 'cordovaGeolocationService','$location', function ($scope, $rootScope, dataSVC, $localStorage, $modal, cordovaGeolocationService,$location) {
+        app.controller('AppCtrl', ['$scope', '$rootScope', 'dataSVC', '$localStorage', '$modal','$location', function ($scope, $rootScope, dataSVC, $localStorage, $modal,$location) {
                 $rootScope.categories = [];
-                $rootScope.appLoaded = true;
+                $rootScope.appLoaded = false;
                 $rootScope.isLocationFound = false;
                 $rootScope.error = '';
                 //$rootScope.sellerID='';
@@ -39,7 +39,30 @@
                     });
                 };
 				$scope.getUserDetail=function(deviceid,platform,gcmkey){
-					dataSVC.getUser(deviceid,platform,gcmkey,function (d) {
+					$rootScope.$storage.user ={AreaId: "e24c7d45-4696-4c90-b10e-481070314268",
+AreaName: null,
+Deviceid: "5454",
+Email: null,
+GCMRegistrationKey: "",
+IsLogin: false,
+IsTempUser: true,
+IsVerified: false,
+Platform: "Android",
+SellerId: "21002e11-b317-4f1d-9441-d15caf3aa5f1",
+SellerName: null,
+UserID: "d236d0ae-7f4d-4449-ae96-dcba77a8b193",
+UserName: null,
+otp: null};
+$rootScope.cart = {
+										itemCount: 0,
+										total: 0,
+										items: []
+									};
+									
+                $rootScope.appLoaded = true;
+				$rootScope.$storage.seller={SellerID: "21002e11-b317-4f1d-9441-d15caf3aa5f1", SellerName: "rajkumar", SellerShopeName: "rajkumar general store", $$hashKey: "object:25"}
+					/*dataSVC.getUser(deviceid,platform,gcmkey,function (d) {
+						console.log(d.data)
 						$rootScope.$storage.user = d.data;
 
 						console.log(d);
@@ -55,18 +78,23 @@
 										items: []
 									};
 								}
+                $rootScope.appLoaded = true;
 							})
 						}
+						else{
+							
+                $rootScope.appLoaded = true;
+						}
 
-					})
+					})*/
 				}
-			//	$scope.getUserDetail('5454','Android','');
+				$scope.getUserDetail('5454','Android','');
 	
-				document.addEventListener("deviceready", function() {		
+			/*	document.addEventListener("deviceready", function() {		
 					$scope.$apply(function () {
 						$scope.getUserDetail(device.uuid,device.platform,'');			
 					});
-				});
+				});*/
        
 
                 $rootScope.addToCart = function (obj) {

@@ -6,7 +6,7 @@ var app=angular.module('app', [
     'ngStorage',
 	'ngAnimate',
 	'ngTouch',
-	'cordovaGeolocationModule'
+	//'cordovaGeolocationModule'
 	/*'ngAnimate',
     'ngCookies',
     'ngResource',*/

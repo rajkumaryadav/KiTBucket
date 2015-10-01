@@ -7,53 +7,25 @@ app.controller('SellerSelectionController', function DBController($scope, dataSV
 	$scope.areaId = $rootScope.areaId;
         $scope.isArea = false;
         $scope.isSeller = false;
-	//	$scope.selarea="";
-//        self.sellerList = $rootScope.sellerList;
-//        console.log($rootScope.$storage.seller);
         if ($rootScope.$storage.seller != null) {
-//            console.log("here");
-          //  $scope.$apply(function() {
-  $location.path("/app/home");
-  try{
-//  jQuery('#selseller').click();
-  }
-  catch(err){
-	  alert('l')
-	  alert(err.message)
-  }
-  
-//});
+  //$location.path("/app/home");
         }
 	$scope.seachArea=function()
 	{
             $scope.isArea = true;
             $scope.isSeller = false;
-//            console.log("here");
-//            $scope.pin = $rootScope.pin;
-//            $scope.areaId = $rootScope.areaId;
-//            console.log($scope.pin);
             dataSVC.getArea($scope.pin,function(d){
                     console.log(d)
                     if(d.data.length > 0){
                         $scope.areaList=d.data;
                     }
             })
-//		dataSVC.updateArea($scope.areaId,function(d){
-//                    console.log(d);
-//                })
-//                dataSVC.getSeller($scope.areaId,function(d){
-//			console.log(d)		
-//			$scope.sellerList=d.data;					
-//		})
                 
 	}
         $scope.seachSeller=function(areaId)
 	{
             $scope.isSeller = true;
             $scope.isArea = false;
-//            console.log("here");
-//            $scope.pin = $rootScope.pin;
-//            $scope.areaId = $rootScope.areaId;
             
 		dataSVC.updateArea(areaId,function(d){
 //                    console.log(d);
@@ -73,12 +45,13 @@ app.controller('SellerSelectionController', function DBController($scope, dataSV
 		/*$rootScope.$storage = $localStorage.$default({
           sellerID: ''
 		});*/
-                
+                  console.log(d);
                 dataSVC.updateSeller(d.SellerID,function(response){
-//                    console.log(d);
+//                  
 
                     if(response.status == true){
 						try{
+							
                         $rootScope.$storage.seller=d;
 						alert($rootScope.$storage.seller)
 						//$scope.$apply(function() {
